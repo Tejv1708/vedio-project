@@ -5,14 +5,12 @@ const VideoPlayer = ({ video, onClose }) => {
   const videoRef = useRef(null);
 
   useEffect(() => {
-    // Play the video when the component mounts
     videoRef.current.play();
 
-    // Add a cleanup function to stop the video when the component unmounts or a new video is selected
     return () => {
       if (videoRef.current) {
         videoRef.current.pause();
-        videoRef.current.currentTime = 0; // Reset the video to the beginning
+        videoRef.current.currentTime = 0;
       }
     };
   }, [video]);

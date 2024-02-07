@@ -9,8 +9,6 @@ const App = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   useEffect(() => {
-    // Fetch videos from your server or load them from storage
-    // For simplicity, using a sample array here
     const initialVideos = [];
 
     setVideos(initialVideos);
